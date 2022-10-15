@@ -5,11 +5,12 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "CaskaydiaCove Nerd Font:pixelsize=21:antialias=true:autohint=true";
+static char *font = "Hack Nerd Font Mono:pixelsize=21:antialias=true:autohint=true";
 // static char *font = "Ubuntu Nerd Font Complete:style=Regular:pixelsize=22:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-    "Font Awesome 6 Free"
+    "CaskaydiaCove Nerd Font:pixelsize=21:antialias=true:autohint=true",
+    "Font Awesome 6 Free:pixelsize=21:antialias=true:autohint=true",
 /*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
 /*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
 };
@@ -102,34 +103,34 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.9;
+float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
   /* 8 normal colors */
-  [0] = "#282a2e", /* black   */
-  [1] = "#a54242", /* red     */
-  [2] = "#8c9440", /* green   */
-  [3] = "#de935f", /* yellow  */
-  [4] = "#5f819d", /* blue    */
-  [5] = "#85678f", /* magenta */
-  [6] = "#5e8d87", /* cyan    */
-  [7] = "#707880", /* white   */
+  [0] = "#414868", /* black   */
+  [1] = "#f7768e", /* red     */
+  [2] = "#9ece6a", /* green   */
+  [3] = "#e0af68", /* yellow  */
+  [4] = "#7aa2f7", /* blue    */
+  [5] = "#bb9af7", /* magenta */
+  [6] = "#7dcfff", /* cyan    */
+  [7] = "#c0caf5", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#373b41", /* black   */
-  [9]  = "#cc6666", /* red     */
-  [10] = "#b5bd68", /* green   */
-  [11] = "#f0c674", /* yellow  */
-  [12] = "#81a2be", /* blue    */
-  [13] = "#b294bb", /* magenta */
-  [14] = "#8abeb7", /* cyan    */
-  [15] = "#c5c8c6", /* white   */
+  [8]  = "#545c7e", /* black   */
+  [9]  = "#db4b4b", /* red     */
+  [10] = "#73daca", /* green   */
+  [11] = "#e0af68", /* yellow  */
+  [12] = "#2ac3de", /* blue    */
+  [13] = "#ff007c", /* magenta */
+  [14] = "#7dcfff", /* cyan    */
+  [15] = "#ffffff", /* white   */
 
   /* special colors */
-  [256] = "#000000", /* background */
-  [257] = "#c5c8c6", /* foreground */
+  [256] = "#1a1b26", /* background */
+  [257] = "#c0caf5", /* foreground */
 };
 
 /*
@@ -146,8 +147,8 @@ unsigned int defaultrcs = 257;
  * will reverse too. Another logic would only make the simple feature too
  * complex.
  */
-unsigned int defaultitalic = 7;
-unsigned int defaultunderline = 7;
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
 
 /*
  * Default shape of cursor
